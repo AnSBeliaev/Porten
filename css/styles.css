@@ -193,7 +193,7 @@
 
 .first-screen {
 	background-image: url("../images/rectangle.jpg");
-	max-width: 1920px;
+	width: 100%;
 	height: 810px;
 	background-size: cover;
 	background-position: center center;
@@ -202,7 +202,7 @@
 }
 
 .first-screen__container {
-	max-width: 730px;
+	width: 730px;
 	height: 500px;
 	display: inline-flex;
 	flex-direction: column;
@@ -223,7 +223,6 @@
 	color: white;
 	font-family: PostNoBillsJaffna, sans-serif;
     font-weight: bold;
-    margin: 0;
     text-indent: 0px;
     position: relative;
     width: 185px;
@@ -261,41 +260,45 @@
 /* new-season */
 
 .new-season {
-	max-width: 1920px;
+	width: 100%;
 	height: 730px;
-	background-size: cover;
-	background-position: center center;
-	margin: 0 auto;
 	display: flex;
 }
 
-
 .new-season__goods {
-	width: 1040px;
-	height: 730px;
-	background-color: black;
-	text-align: center;
+    width: 50%;
+    height: 730px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.new-season__flex {
-	width: 880px;
-	height: 405px;
-	display: inline-flex;
-	justify-content: space-between;
-
+.new-season__products {
+    width: 100%;
+    height: 405px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 880px;
 }
 
 .new-season__column {
 	width: 260px;
 	height: 405px;
-	background-color: #191B1C;
 	display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
 .new-season__watch {
-	margin-bottom: 20px;
+	margin: auto;
+}
+
+.new-season__wrap {
+	width: 260px;
+	height: 325px;
+	background-color: #191B1C;
+	display: flex;
 }
 
 .new-season__description {
@@ -314,19 +317,17 @@
 	line-height: 24px;
 }
 
-.h2 {
-	text-transform: uppercase;
-	height: 140px;
-	padding-top: 90px;
-	width: 100%;
-	font-family: 'Playfair Display', serif;
-	color: white;
-	font-size: 36px;
-	line-height: 48px;
-	position: relative;
+.new-season__title {
+    text-transform: uppercase;
+    height: 140px;
+    padding-top: 90px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    line-height: 48px;
 }
 
-.h2::after {
+.new-season__title::after {
 	display: block;
 	content: '';
 	width: 120px;
@@ -346,14 +347,12 @@
 }
 
 .new-season__collection {
-	width: 880px;
+	width: 50%;
 	height: 730px;
-	background: url("../images/collection.jpg")
-}
-
-.new-season__wrap {
-	width: 880px;
-	height: 100%;
+	background-image: url("../images/collection.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left top;
 }
 
 .new-season__new {
@@ -381,25 +380,44 @@
 /* collection*/
 
 .collection {
-	max-width: 1920px;
-	height: 600px;
-	background-size: cover;
-	background-position: center center;
-	margin: 0 auto;
-	display: flex;
+    height: 600px;
+    width: 100%;
+    display: flex;
 }
 
 .collection__screen {
-	width: 880px;
-	height: 600px;
-	background-image: url(../images/collection__2018.jpg);
+    width: 40%;
+    height: 600px;
+    background-image: url(../images/collection__2018.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .collection__description {
-	width: 1040px;
+	width: 60%;
 	height: 600px;
 	background-color: black;
 	text-align: center;
+}
+
+.collection__title {
+    text-transform: uppercase;
+    height: 140px;
+    padding-top: 90px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.collection__title::after {
+	display: block;
+	content: '';
+	width: 120px;
+    height: 2px;
+    background: white;
+    margin: 39px auto 0px;
 }
 
 .collection__text {
