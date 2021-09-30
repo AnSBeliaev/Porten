@@ -243,6 +243,8 @@
 	color: white;
 	font-size: 22px;
 	line-height: 28px;
+	padding-top: 15px;
+    display: block;
 }
 
 .first-screen__lorem {
@@ -261,13 +263,15 @@
 
 .new-season {
 	width: 100%;
-	height: 730px;
+	min-height: 730px;
+	height: auto;
 	display: flex;
 }
 
 .new-season__goods {
     width: 50%;
-    height: 730px;
+    min-height: 730px;
+    height: auto;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -276,7 +280,8 @@
 
 .new-season__products {
     width: 100%;
-    height: 405px;
+    min-height: 405px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -348,7 +353,8 @@
 
 .new-season__collection {
 	width: 50%;
-	height: 730px;
+	min-height: 730px;
+	height: auto;
 	background-image: url("../images/collection.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -380,7 +386,8 @@
 /* collection*/
 
 .collection {
-    height: 600px;
+    min-height: 600px;
+    height: auto;
     width: 100%;
     display: flex;
 }
@@ -452,37 +459,78 @@
 	transition: 0,3s;
 }
 
+/*new-goods*/
+
 .new-goods {
-	max-width: 1920px;
-	height: 1289px;
+	width: 100%;
+	min-height: 1290px;
+	height: auto;
 	background-color: black;
-	margin: 0 auto;
 	text-align: center;
 }
 
 .new-goods__container {
-	width: 1110px;
-	height: 890px;
-	justify-content: space-between;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	margin: 0 auto;
-	padding-top: 80px;
+    max-width: 1110px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .new-goods h2 {
 	padding-top: 120px;
 }
 
+.new-goods__title {
+    text-transform: uppercase;
+    height: 140px;
+    padding-top: 90px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.new-goods__title::after {
+	display: block;
+	content: '';
+	width: 120px;
+    height: 2px;
+    background: white;
+    margin: 39px auto 0px;
+}
+
+.new-goods__wrap {
+	width: 260px;
+	height: 325px;
+	background-color: #191B1C;
+	display: flex;
+}
+
+.new-goods__description {
+	width: 260px;
+	height: 80px;
+	background-color: black;
+	text-align: left;
+	padding-top: 25px;
+}
+
+.new-goods__column {
+	width: 260px;
+	height: 405px;
+	display: flex;
+    flex-direction: column;
+}
+
 /* our-brands */
 
 .our-brands {
-	max-width: 1920px;
-	height: 362px;
-	background-color: #0F0F0F;
-	margin: 0 auto;
-	text-align: center;
+    width: 100%;
+    min-height: 360px;
+    height: auto;
+    background-color: #0F0F0F;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .our-brands__brand {
@@ -492,30 +540,54 @@
 }
 
 .our-brands__container {
-	width: 1110px;
-	height: 94px;
-	justify-content: space-between;
-	display: flex;
-	margin: 0 auto;
+    max-width: 1110px;
+    width: 60%;
+    min-height: 94px;
+    justify-content: space-around;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+
+.our-brands__title {
+    text-transform: uppercase;
+    height: 140px;
+    padding-top: 90px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.our-brands__title::after {
+	display: block;
+	content: '';
+	width: 120px;
+    height: 2px;
+    background: white;
+    margin: 39px auto 0px;
 }
 
 
 /* footer */
 
 .footer {
-	max-width: 1920px;
-	height: 400px;
-	background-image: url(../images/footer.jpg);
-	margin: 0 auto;
-	text-align: center;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    background-image: url(../images/footer.jpg);
+    text-align: center;
 }
 
 .footer__container {
-	width: 1110px;
-	height: 240px;
-	display: inline-flex;
-	justify-content: space-between;
-	padding-top: 80px;
+    max-width: 1110px;
+    width: 80%;
+    min-height: 240px;
+    display: inline-flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    flex-wrap: wrap;
 }
 
 .footer__column {
@@ -607,18 +679,19 @@ input {
 /* last-line */ 
 
 .last-line {
-	max-width: 1920px;
-	max-height: 50px;
+	width: 100%;
+	min-height: 50px;
+	height: auto;
 	background-color: black;
-	margin: 0 auto;
 }
 
 .last-line__container {
 	max-width: 1110px;
-	height: 50px;
+	min-height: 50px;
+	height: auto;
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
+	padding: 0 25px;
 }
 
 .last-line__column {
